@@ -1,0 +1,27 @@
+<app-header />
+<div class="home">
+  <div>
+    <h2 class="title">Comment trouver mon artisan ?</h2>
+    <ul>
+      <li *ngFor="let etape of etapes">{{ etape.texte }}</li>
+    </ul>
+  </div>
+  <div class="artisan">
+    <h2 class="title red">Les trois artisans du mois :</h2>
+    <div class="row boucle">
+      <div *ngFor="let artisan of artisan" class="col-md-4 mb-4">
+        <div class="card">
+          <a [routerLink]="['/fiche-artisant', artisan.name]">
+            <div class="card-body">
+              <h3 class="card-title">{{ artisan.name }}</h3>
+              <p class="card-text">Note : {{ artisan.note }} /5</p>
+              <p class="card-text">Spécialité : {{ artisan.specialty }}</p>
+              <p class="card-text">Localisation : {{ artisan.location }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer />

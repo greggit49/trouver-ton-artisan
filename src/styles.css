@@ -1,0 +1,9 @@
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    color: #353d4d;
+    font-family: "Graphik";
+    font-size: 1.6rem;
+    line-height: 1.625;
+  }
