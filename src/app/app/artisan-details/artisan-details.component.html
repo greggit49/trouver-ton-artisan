@@ -1,0 +1,36 @@
+<app-header />
+<div *ngIf="artisan" class="details">
+  <div class="donner">
+    <h1 class="title">{{ artisan.name }}</h1>
+    <p>
+      Note : {{ artisan.note }} / 5<br />
+      Spécialité : {{ artisan.specialty }}<br />
+      Localisation : {{ artisan.location }}
+    </p>
+    <h2 class="title red">A propos</h2>
+    <p>{{ artisan.about }}</p>
+  </div>
+  <div class="contact">
+    <h2 class="title grey">Contactez-moi</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="name" class="titre">Nom :</label><br />
+      <input type="text" class="input" id="name" [(ngModel)]="name" /><br />
+
+      <label for="subject" class="titre">Objet :</label><br />
+      <input
+        type="text"
+        class="input"
+        id="subject"
+        [(ngModel)]="subject"
+      /><br />
+
+      <label for="message" class="titre">Message :</label><br />
+      <textarea id="message" class="mess" [(ngModel)]="message"></textarea
+      ><br />
+
+      <input type="submit" value="Envoyer" />
+    </form>
+  </div>
+</div>
+<app-footer />
+<router-outlet></router-outlet>

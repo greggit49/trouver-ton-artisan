@@ -1,0 +1,29 @@
+.card-title {
+    color: #00497c;
+    text-decoration: underline;
+    text-decoration-color: #00497c;
+  }
+  .lien {
+    text-decoration: none;
+    color: #0074c7;
+  }
+  .lien:hover {
+    color: #00497c;
+  }
+  .card {
+    margin: 20px;
+    border-color: #0074c7;
+  }
+  .card:hover {
+    border-color: #00497c;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .titre {
+    color: #00497c;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+  }
