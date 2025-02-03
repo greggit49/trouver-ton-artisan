@@ -1,3 +1,17 @@
 {
-  "routes": {}
-}
+  "version":2,
+  "builds": [
+    {
+      "src":"package.json",
+      "use":"@vercel/static-build",
+      "config":{
+        "distDir":"dist/<trouver-ton-artisan-angular>/browser"
+    }
+  }
+  ],
+  "routes": {
+    "src":"/(.*)",
+    "dest": "/index.html"
+    }
+  }
+
